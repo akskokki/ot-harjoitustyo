@@ -1,0 +1,114 @@
+akskokki@DESKTOP-7PG8MOQ:~/ot_viikko1$ git log --stat | cat
+commit ad56eab7179c20cd5a498dd57c5994cc297b0b22
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:44:41 2022 +0200
+
+    file1 poistettu ja file2 uudelleennimetty
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 618ecc047279c1e8ca8e0ec9e2594660e5f534ad
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:41:05 2022 +0200
+
+    tiedostoja lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7107bf1c2cd2b64151e3ef411f9b3f094e043918
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:25:18 2022 +0200
+
+    eka ja kolmas muokattu
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit f5c5c57c2ccda789eb86a8bc50374bb81d3a2358
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:22:31 2022 +0200
+
+    tiedosto uudelleennimetty eka
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9dd3fa21fc5d0110ae9f02204fac991d554c34a0
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:21:33 2022 +0200
+
+    toinen poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit eebdb19851758108264a1dc5d2e6dc7e0328d75b
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:19:07 2022 +0200
+
+    tiedosto muokattu lisää
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c233241f7064bfd7d89f228f78cca972dddc24bb
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:17:25 2022 +0200
+
+    tiedosto muokattu
+
+ tiedosto.txt | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+commit 7d3c07655da5ba41eef2ecdd061894954ec1a8aa
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:02:33 2022 +0200
+
+    uusi kansio ja neljäs tiedosto
+
+ stuff/neljas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 743b6342b22dfc45f9615416c5a2f649f0fcdf3c
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 20:00:22 2022 +0200
+
+    muutoksia teksteihin
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 982d56602575b7de2ad3f66d14ac7801fbc56479
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 19:57:48 2022 +0200
+
+    kolmas lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9709c7decafe580956fb1effef9ce1629bb48494
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 19:53:16 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 9a10c40286370594d4bd9036e23649298cccc9e3
+Author: Akseli Kokki <akseli.kokki@gmail.com>
+Date:   Tue Mar 22 19:49:26 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
