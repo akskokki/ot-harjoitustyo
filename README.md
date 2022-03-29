@@ -8,4 +8,3 @@
 
 [komentorivi.txt](https://github.com/akskokki/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-testimuutos
