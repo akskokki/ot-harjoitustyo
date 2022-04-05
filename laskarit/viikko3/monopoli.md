@@ -24,4 +24,5 @@ classDiagram
     Pelaaja "0..1" -- "*" Katu
     Katu "1" -- "0..4" Talo
     Katu "1" -- "0..1" Hotelli
+    Pelaaja "*" -- "0..1" Kiinteistö
 ```
