@@ -3,11 +3,11 @@
 Sovellus on Miinaharava-peli. Käyttäjä voi valita halutun vaikeustason, ja tallentaa pelin tuloksen pistetaulukolle.
 ## Perusversion tarjoama toiminnallisuus
 - Vaikeustason valinta
-	- Peliä voi pelata kolmella klassikkovaikeustasolla (helppo, keskitasoinen, vaikea)
+	- Peliä voi pelata kolmella klassikkovaikeustasolla (helppo, keskitasoinen, vaikea) - tehty
 - Perus Miinaharava-pelin toiminnallisuus
-	- Automaattisesti generoitu pelilauta
-	- Kyky avata soluja sekä merkitä avaamattomia soluja miinoiksi
-	- Aikamittari sekä jäljellä olevien pommien laskuri
+	- Automaattisesti generoitu pelilauta - tehty
+	- Kyky avata soluja sekä merkitä avaamattomia soluja miinoiksi - tehty
+	- Aikamittari sekä jäljellä olevien miinojen laskuri
 - Pelin loppuruutu
 	- Voiton tapahtuessa kyky tallentaa tulos ja saavutettu aika paikalliselle pistetaulukolle
 	- Uuden pelin valinta
