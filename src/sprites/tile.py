@@ -1,12 +1,13 @@
-from load_image import load_image
 import pygame
+from load_image import load_image
+
 
 class Tile(pygame.sprite.Sprite):
-    def __init__(self, x, y, type):
+    def __init__(self, x, y, digit):
         super().__init__()
-        # type: -1 = mine, 0-8 = number
-        self.type = type
-        
+        # -1: mine, 0-8: number
+        self.digit = digit
+
         self.opened = False
         self.flagged = False
         self.exploded = False
@@ -17,23 +18,23 @@ class Tile(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-    
+
     def open(self):
-        if self.flagged == False:
+        if self.flagged is False:
             self.opened = True
-    
+
     def flag(self):
-        if self.opened == False:
+        if self.opened is False:
             self.flagged = not self.flagged
-    
+
     def explode(self):
         self.exploded = True
-    
+
     def update(self):
         if self.exploded:
             self.image = self._images["mine_clicked"]
         elif self.opened:
-            self.image = self._images[str(self.type)]
+            self.image = self._images[str(self.digit)]
         elif self.flagged:
             self.image = self._images["flag"]
         else:
