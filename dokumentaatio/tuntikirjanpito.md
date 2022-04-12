@@ -4,7 +4,8 @@
 | 29.3. | 1 | Vaatimusmäärittely |
 | 8.4. | 4 | Pelin perustoiminnan toteutus |
 | 10.4. | 3 | Refaktorointia ja LevelGenerator toteutus |
-| 11.4. | 2 | Testien kehitystä |
-|  | 1 | Arkkitehtuurikuvaus |
-|  | 3 | Vaikeustasonvalinta |
-| yht. | 14 | |
+| 11.4. | 1 | Koodin puhdistusta pylintin avulla |
+| | 2 | Testien kehitystä |
+| | 1 | Arkkitehtuurikuvaus |
+| | 3 | Vaikeustasonvalinta |
+| yht. | 15 | |
