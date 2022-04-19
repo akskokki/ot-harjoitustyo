@@ -9,5 +9,5 @@
 | | 1 | Arkkitehtuurikuvaus |
 | | 3 | Vaikeustasonvalinta |
 | 12.4. | 2 | Chording-toteutus |
-| 19.4. | 4 | Lopputilalogiikkaa ja UI-refaktorointi |
+| 19.4. | 4 | Lopputilalogiikka ja UI-refaktorointi |
 | yht. | 21 | |
