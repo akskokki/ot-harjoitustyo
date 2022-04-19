@@ -15,7 +15,6 @@ class GameLoop:
             self._handle_events()
             self.level.update()
             result = self.level.check_completion()
-            print(result)
             if result in ("win", "loss"):
                 return result
             self.renderer.render()
