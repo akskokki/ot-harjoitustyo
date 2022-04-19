@@ -8,4 +8,6 @@
 | | 2 | Testien kehitystä |
 | | 1 | Arkkitehtuurikuvaus |
 | | 3 | Vaikeustasonvalinta |
-| yht. | 15 | |
+| 12.4. | 2 | Chording-toteutus |
+| 19.4. | 4 | Lopputilalogiikkaa ja UI-refaktorointi |
+| yht. | 21 | |
