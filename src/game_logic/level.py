@@ -37,12 +37,15 @@ class Level:
                 self.click((x, y), "left")
 
     def check_completion(self):
+        complete = True
         for tile in self.tiles:
             if tile.exploded:
                 return "loss"
             if tile.digit > -1 and not tile.opened:
-                return "incomplete"
-        return "win"
+                complete = False
+        if complete:
+            return "win"
+        return "incomplete"
 
     def _create_level(self):
         width = len(self.level_map[0])

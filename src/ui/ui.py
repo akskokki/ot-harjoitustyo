@@ -35,7 +35,7 @@ class UI:
         window.mainloop()
 
         self.game_difficulty = difficulty_ui.selection
-        
+
         self.view = "game"
 
     def _handle_game_ui(self):
