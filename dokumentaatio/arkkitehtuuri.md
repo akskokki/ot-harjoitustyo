@@ -26,3 +26,22 @@ classDiagram
     }
     Level "1" -- "*" Tile
 ```
+
+Kun käyttäjä klikkaa peliruudukon ruutua, Level-luokka etsii klikatuissa koordinaateissa sijaitsevan Tile-olion, ja merkitsee sen avatuksi:
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant GameLoop
+    participant Level
+    participant Tile
+    
+    User ->>+ GameLoop: click unopened tile
+    GameLoop ->>+ Level: click((x, y), "left")
+    Level ->>+ Tile: rect.collidepoint((x, y))
+    Tile -->>- Level: True
+    Level ->>+ Tile: open()
+    Tile -->>- Level: True
+    Level -->>- GameLoop: 
+    GameLoop -->>- User: 
+```
