@@ -46,4 +46,4 @@ sequenceDiagram
     GameLoop -->>- User: 
 ```
 
-Tile palauttaa arvon True avaamisen jälkeen osoittaakseen, että se on juuri tällä avaamisyrityksellä avattu ruutu. Tämä on tärkeää tyhjien ruutujen ympäristöjensä avaamisen toiminnan kannalta.
+Tile palauttaa arvon True avautumisensa jälkeen osoittaakseen, että se on juuri tällä avaamisyrityksellä avattu ruutu. Tämä on tärkeää tyhjien ruutujen ympäristöjensä avaamisen toiminnan kannalta.
