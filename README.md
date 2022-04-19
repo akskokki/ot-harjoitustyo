@@ -1,6 +1,6 @@
 # Miinaharava
 
-Klassikko miinaharava-peli.
+Klassikko miinaharava-peli. Jos peli ei ole ennestään tuttu, voi säännöt opetella vaikkapa täältä: [How to play Minesweeper](https://minesweepergame.com/strategy/how-to-play-minesweeper.php).
 
 ## Dokumentaatio
 
