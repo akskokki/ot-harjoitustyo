@@ -1,5 +1,5 @@
 import unittest
-from level_generator import LevelGenerator
+from game_logic.level_generator import LevelGenerator
 
 
 class TestLevelGenerator(unittest.TestCase):
