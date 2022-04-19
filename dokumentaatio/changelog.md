@@ -18,3 +18,5 @@
   - Lisätty testit lopputilalogiikalle
 - Chording-implementaatio
   - Tyhjän ruudun avautuessa se avaa automaattisesti kaikki ympärillään olevat ruudut
+- UI-refaktorointi
+  - Käyttöliittymäkoodi on viimeinkin eriytetty pois index-tiedostosta, ja jokainen käyttöliittymänäkymä on nyt oma luokkansa
