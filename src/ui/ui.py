@@ -1,40 +1,68 @@
-from tkinter import ttk
+from tkinter import Tk
+
+from ui.difficulty_ui import DifficultyUI
+from ui.game_ui import GameUI
+from ui.end_ui import EndUI
 
 
 class UI:
-    def __init__(self, root):
-        self._root = root
-        self.selection = 0
+    def __init__(self):
+        self.running = True
+        self.view = "difficulty"
+        self.game_difficulty = 0
+        self.game_result = ""
 
     def start(self):
-        heading_label = ttk.Label(master=self._root, text="Choose difficulty")
-        button_easy = ttk.Button(master=self._root,
-                                 text="Easy",
-                                 command=self._handle_button_easy
-                                 )
-        button_medium = ttk.Button(master=self._root,
-                                   text="Medium",
-                                   command=self._handle_button_medium
-                                   )
-        button_hard = ttk.Button(
-            master=self._root,
-            text="Hard",
-            command=self._handle_button_hard
-        )
+        while self.running:
+            self._handle_view()
 
-        heading_label.grid(row=0, columnspan=3, padx=5, pady=5)
-        button_easy.grid(row=1, column=0, padx=5, pady=5)
-        button_medium.grid(row=1, column=1, padx=5, pady=5)
-        button_hard.grid(row=1, column=2, padx=5, pady=5)
+    def _handle_view(self):
+        if self.view == "difficulty":
+            self._handle_difficulty_ui()
+        elif self.view == "game":
+            self._handle_game_ui()
+        elif self.view == "end":
+            self._handle_end_ui()
 
-    def _handle_button_easy(self):
-        self.selection = 1
-        self._root.destroy()
+    def _handle_difficulty_ui(self):
+        window = Tk()
+        window.title("Minesweeper")
 
-    def _handle_button_medium(self):
-        self.selection = 2
-        self._root.destroy()
+        difficulty_ui = DifficultyUI(window)
+        difficulty_ui.start()
 
-    def _handle_button_hard(self):
-        self.selection = 3
-        self._root.destroy()
+        window.resizable(False, False)
+        window.mainloop()
+
+        self.game_difficulty = difficulty_ui.selection
+        
+        self.view = "game"
+
+    def _handle_game_ui(self):
+        if self.game_difficulty == 0:
+            self.running = False
+            return
+
+        game_ui = GameUI()
+        self.game_result = game_ui.start(self.game_difficulty)
+        if self.game_result == "quit":
+            self.running = False
+
+        self.view = "end"
+
+    def _handle_end_ui(self):
+        window = Tk()
+        window.title("Game Over")
+
+        end_ui = EndUI(window)
+        end_ui.start(self.game_result)
+
+        window.resizable(False, False)
+        window.mainloop()
+
+        if end_ui.selection == 1:
+            self.view = "game"
+        elif end_ui.selection == 2:
+            self.view = "difficulty"
+        else:
+            self.running = False

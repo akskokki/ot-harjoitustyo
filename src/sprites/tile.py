@@ -1,5 +1,5 @@
 import pygame
-from load_image import load_image
+from utilities.load_image import load_image
 
 
 class Tile(pygame.sprite.Sprite):
@@ -20,8 +20,10 @@ class Tile(pygame.sprite.Sprite):
         self.rect.y = y
 
     def open(self):
-        if self.flagged is False:
+        if not self.flagged and not self.opened:
             self.opened = True
+            return True
+        return False
 
     def flag(self):
         if self.opened is False:

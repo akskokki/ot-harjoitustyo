@@ -1,6 +1,7 @@
 import unittest
 import pygame
-from level import Level
+
+from game_logic.level import Level
 
 
 LEVEL_MAP = [[-1, 1, 0],
@@ -38,3 +39,30 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(self._opened_middle(), False)
         self._click_middle("left")
         self.assertEqual(self._opened_middle(), False)
+
+    def test_chording_works(self):
+        self.assertEqual(self.level.tiles.sprites()[1].opened, False)
+        self.assertEqual(self.level.tiles.sprites()[2].opened, False)
+        self.assertEqual(self.level.tiles.sprites()[4].opened, False)
+        self.assertEqual(self.level.tiles.sprites()[5].opened, False)
+        self.level.click((50, 10), "left")
+        self.assertEqual(self.level.tiles.sprites()[1].opened, True)
+        self.assertEqual(self.level.tiles.sprites()[2].opened, True)
+        self.assertEqual(self.level.tiles.sprites()[4].opened, True)
+        self.assertEqual(self.level.tiles.sprites()[5].opened, True)
+
+    def test_check_completion_incomplete(self):
+        self.assertEqual(self.level.check_completion(), "incomplete")
+
+    def test_check_completion_win(self):
+        self.level.click((30, 10), "left")
+        self.level.click((50, 10), "left")
+        self.level.click((10, 30), "left")
+        self.level.click((30, 30), "left")
+        self.level.click((50, 30), "left")
+        self.level.click((10, 50), "left")
+        self.assertEqual(self.level.check_completion(), "win")
+
+    def test_check_completion_loss(self):
+        self.level.click((10, 10), "left")
+        self.assertEqual(self.level.check_completion(), "loss")

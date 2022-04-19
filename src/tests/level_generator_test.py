@@ -11,7 +11,7 @@ class TestLevelGenerator(unittest.TestCase):
         self.level_map = self.level_generator.generate_level(
             self.width, self.height, self.mines)
 
-    def _check_mines_around_tile(self, x, y):
+    def _count_mines_around_tile(self, x, y):
         mine_count = 0
         for num_x in range(x-1, x+2):
             for num_y in range(y-1, y+2):
@@ -38,5 +38,5 @@ class TestLevelGenerator(unittest.TestCase):
             for x in range(self.width):
                 if self.level_map[y][x] == -1:
                     continue
-                self.assertEqual(self._check_mines_around_tile(
+                self.assertEqual(self._count_mines_around_tile(
                     x, y), self.level_map[y][x])

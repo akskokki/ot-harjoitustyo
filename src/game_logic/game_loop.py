@@ -14,8 +14,11 @@ class GameLoop:
         while self.running:
             self._handle_events()
             self.level.update()
-
+            result = self.level.check_completion()
+            if result in ("win", "loss"):
+                return result
             self.renderer.render()
+        return "quit"
 
     def _handle_events(self):
         for event in pygame.event.get():
