@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa projektin viimeisin releasen lähdekoodi [täältä](https://github.com/akskokki/ot-harjoitustyo/releases)
+Lataa projektin viimeisin releasen lähdekoodi [täältä](https://github.com/akskokki/ot-harjoitustyo/releases).
 
 ## Ohjelman käynnistäminen
 
