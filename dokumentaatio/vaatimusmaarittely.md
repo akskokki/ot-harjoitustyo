@@ -13,7 +13,7 @@ Sovellus on Miinaharava-peli. Käyttäjä voi valita halutun vaikeustason, ja ta
 	- Voiton tapahtuessa kyky tallentaa tulos ja saavutettu aika paikalliselle pistetaulukolle
 	- Uuden pelin valinta - __tehty__
 ## Jatkokehitysideoita
-- Mahdollisuus valita mukautettu, mielivaltaisen kokoinen pelilauta __tehty__
+- Mahdollisuus valita mukautettu, mielivaltaisen kokoinen pelilauta - __tehty__
 - Pelilautavalintoja, jotka koostuvat ei-neliön muotoisista soluista
 	- Esim. kolmion tai kuusikulmion muotoiset solut
 - Vinkkinappula joka näyttää seuraavan mahdollisen siirron, mutta diskaa pelin pistetaulukoilta
