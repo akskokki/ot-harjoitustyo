@@ -62,11 +62,12 @@ class Level:
                 self.click((x, y), "left")
 
     def check_completion(self):
-        """Checks whether the minefield has been completed, in one way or another
+        """Checks whether the game has been completed, in one way or another
 
         Returns:
             "win": all empty tiles have been opened without exploding any mines
             "loss": a mine has exploded
+            "incomplete": the game has been interrupted in an unfinished state
         """
         complete = True
         for tile in self.tiles:
