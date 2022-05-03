@@ -4,6 +4,7 @@ Klassikko miinaharava-peli. Jos peli ei ole ennestään tuttu, voi säännöt op
 
 ## Dokumentaatio
 
+* [Käyttöohje](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 * [Releases](https://github.com/akskokki/ot-harjoitustyo/releases)
 * [Vaatimusmäärittely](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Tuntikirjanpito](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
