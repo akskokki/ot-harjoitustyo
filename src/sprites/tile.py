@@ -4,8 +4,13 @@ from utilities.load_image import load_image
 
 class Tile(pygame.sprite.Sprite):
     def __init__(self, x, y, digit):
+        """Constructor that creates the tile
+
+        Args:
+            x,y: the coordinates of the tile
+            digit: the value of the tile; -1 is a mine, 0 is a blank and 1-8 is a numbered tile
+        """
         super().__init__()
-        # -1: mine, 0-8: number
         self.digit = digit
 
         self.opened = False
@@ -20,19 +25,28 @@ class Tile(pygame.sprite.Sprite):
         self.rect.y = y
 
     def open(self):
+        """Opens the tile if it is in a state in which it can be opened
+        """
         if not self.flagged and not self.opened:
             self.opened = True
             return True
         return False
 
     def flag(self):
-        if self.opened is False:
+        """Inverts the state of the tile's flag
+        """
+        if not self.opened:
             self.flagged = not self.flagged
 
     def explode(self):
-        self.exploded = True
+        """Explodes the tile if it is not flagged
+        """
+        if not self.flagged:
+            self.exploded = True
 
     def update(self):
+        """Sets the tile's image to appropriately display its current state
+        """
         if self.exploded:
             self.image = self._images["mine_clicked"]
         elif self.opened:
@@ -43,6 +57,8 @@ class Tile(pygame.sprite.Sprite):
             self.image = self._images["unopened"]
 
     def _load_images(self):
+        """Loads all of the necessary images for the tile
+        """
         return {
             "-1": load_image("tile_mine_1.png"),
             "0": load_image("tile_empty.png"),
