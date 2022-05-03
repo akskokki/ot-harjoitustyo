@@ -20,3 +20,10 @@
   - Tyhjän ruudun avautuessa se avaa automaattisesti kaikki ympärillään olevat ruudut
 - UI-refaktorointi
   - Käyttöliittymäkoodi on viimeinkin eriytetty pois index-tiedostosta, ja jokainen käyttöliittymänäkymä on nyt oma luokkansa
+
+## Viikko 6
+- Aikalaskuri lisätty
+  - Pelin loppuruutu näyttää nyt peliin käytetyn ajan, jos pelaaja voittaa
+- Custom vaikeustaso
+  - Pelaaja voi halutessaan valita mielivaltaisen kokoisen pelikentän haluamallaan miinamäärällä
+  - **Tiedetty bugi:** Jos pelikenttä on todella suuri, ja miinamäärä suhteellisen pieni, peli kaatuu tyhjien ruutujen avausketjun pituuden takia (RecursionError). Tämä tullaan korjaamaan tulevissa versioissa optimoimalla ruutujen avausalgoritmin toiminnallisuutta.
