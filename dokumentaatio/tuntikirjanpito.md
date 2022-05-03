@@ -10,4 +10,6 @@
 | | 3 | Vaikeustasonvalinta |
 | 12.4. | 2 | Chording-toteutus |
 | 19.4. | 4 | Lopputilalogiikka ja UI-refaktorointi |
-| yht. | 21 | |
+| 2.5. | 2 | Aikamittarin lisäys |
+| 3.5. | 3 | Custom-vaikeustaso |
+| yht. | 26 | |
