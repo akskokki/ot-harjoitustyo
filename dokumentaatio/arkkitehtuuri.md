@@ -5,7 +5,7 @@
 Ohjelman pakkausrakenne on seuraavanlainen:
 
 - game_logic - Pelin toiminnallisuuden toteuttava sovelluslogiikka
-    - sprites - Sisältää pelilogiikan käyttämät sprite-oliot
+    - sprites - Pelilogiikan käyttämät sprite-oliot
     - assets - Pelin käyttämät kuvatiedostot
 - ui - Käyttöliittymää käsittelevät luokat
 - utilities - Pieniä yksinkertaisia luokkia jotka helpottavat koodin toteutusta
