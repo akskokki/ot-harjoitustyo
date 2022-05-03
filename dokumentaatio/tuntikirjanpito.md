@@ -12,4 +12,5 @@
 | 19.4. | 4 | Lopputilalogiikka ja UI-refaktorointi |
 | 2.5. | 2 | Aikamittarin lisäys |
 | 3.5. | 3 | Custom-vaikeustaso |
+| | 1 | Lisätty docstring-dokumentaatiota |
 | yht. | 26 | |
