@@ -27,3 +27,5 @@
 - Custom vaikeustaso
   - Pelaaja voi halutessaan valita mielivaltaisen kokoisen pelikentän haluamallaan miinamäärällä
   - **Tiedetty bugi:** Jos pelikenttä on todella suuri, ja miinamäärä suhteellisen pieni, peli kaatuu tyhjien ruutujen avausketjun pituuden takia (RecursionError). Tämä tullaan korjaamaan tulevissa versioissa optimoimalla ruutujen avausalgoritmin toiminnallisuutta.
+- Paljon uutta docstring-dokumentaatiota
+  - Kaikki pelilogiikkaluokat, sekä tärkeimmät käyttöliittymäluokat
