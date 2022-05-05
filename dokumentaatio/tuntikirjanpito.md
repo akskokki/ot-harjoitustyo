@@ -13,4 +13,5 @@
 | 2.5. | 2 | Aikamittarin lisäys |
 | 3.5. | 3 | Custom-vaikeustaso |
 | | 1 | Lisätty docstring-dokumentaatiota |
+| 5.5. | 2 | Sovelluslogiikan optimisointia ja polishia |
 | yht. | 26 | |
