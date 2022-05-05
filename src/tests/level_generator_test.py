@@ -7,7 +7,7 @@ class TestLevelGenerator(unittest.TestCase):
         self.level_generator = LevelGenerator()
         self.width = 5
         self.height = 6
-        self.mines = 7
+        self.mines = 15
         self.level_map = self.level_generator.generate_level(
             self.width, self.height, self.mines)
 

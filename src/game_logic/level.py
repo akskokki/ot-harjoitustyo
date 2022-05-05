@@ -14,6 +14,8 @@ class Level:
         self.cell_size = cell_size
 
         self.tiles = pygame.sprite.Group()
+        self.tiles_grid = []
+        self.chord_queue = []
         self.all_sprites = pygame.sprite.Group()
 
         self._create_level()
@@ -22,6 +24,7 @@ class Level:
         """Handles all necessary updates on the game screen
         """
         self.tiles.update()
+        self._clear_chord_queue()
 
     def click(self, pos, button):
         """Performs a click-action on the specified position on the screen
@@ -50,16 +53,25 @@ class Level:
             tile.explode()
 
     def chord(self, tile):
-        """Opens all tiles around a specified tile
+        """Adds all tiles around a specific tile to a queue from which they will be opened
 
         Args:
             tile: the tile which is used as the origin point of this action
         """
-        tile_y = tile.rect.y
-        tile_x = tile.rect.x
-        for y in range(tile_y-self.cell_size, tile_y+self.cell_size+1, self.cell_size):
-            for x in range(tile_x-self.cell_size, tile_x+self.cell_size+1, self.cell_size):
-                self.click((x, y), "left")
+        tile_y = int(tile.rect.y / self.cell_size)
+        tile_x = int(tile.rect.x / self.cell_size)
+
+        for y in range(tile_y-1, tile_y+2):
+            for x in range(tile_x-1, tile_x+2):
+                if y >= 0 and y < len(self.tiles_grid) and x >= 0 and x < len(self.tiles_grid[0]):
+                    self.chord_queue.append(self.tiles_grid[y][x])
+
+    def _clear_chord_queue(self):
+        """Triggers all tiles in the chord queue and then clears the queue
+        """
+        for tile in self.chord_queue:
+            self.trigger(tile)
+        self.chord_queue = []
 
     def check_completion(self):
         """Checks whether the game has been completed, in one way or another
@@ -72,12 +84,20 @@ class Level:
         complete = True
         for tile in self.tiles:
             if tile.exploded:
+                self._open_all_mines()
                 return "loss"
             if tile.digit > -1 and not tile.opened:
                 complete = False
         if complete:
             return "win"
         return "incomplete"
+
+    def _open_all_mines(self):
+        """Opens all tiles containing mines
+        """
+        for tile in self.tiles:
+            if tile.digit == -1:
+                tile.open()
 
     def _create_level(self):
         """Creates all the sprites that the level consists of, according to the given level map
@@ -86,10 +106,15 @@ class Level:
         height = len(self.level_map)
 
         for y in range(height):
+            tiles_grid_row = []
             for x in range(width):
                 digit = self.level_map[y][x]
                 norm_x = x * self.cell_size
                 norm_y = y * self.cell_size
-                self.tiles.add(Tile(norm_x, norm_y, digit))
+
+                tile = Tile(norm_x, norm_y, digit)
+                self.tiles.add(tile)
+                tiles_grid_row.append(tile)
+            self.tiles_grid.append(tiles_grid_row)
 
         self.all_sprites.add(self.tiles)

@@ -28,14 +28,17 @@ class GameLoop:
         """
 
         while self.running:
+            result = self.level.check_completion()
             self._handle_events()
             self.level.update()
-            result = self.level.check_completion()
-            if result == "win":
-                return self.clock.get_ticks()
-            if result == "loss":
-                return -1
             self.renderer.render()
+            if result == "win":
+                final_time = self.clock.get_ticks()
+                pygame.time.wait(2000)
+                return final_time
+            if result == "loss":
+                pygame.time.wait(2000)
+                return -1
             self.clock.tick(60)
         return 0
 

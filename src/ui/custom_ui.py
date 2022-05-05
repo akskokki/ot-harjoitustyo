@@ -12,13 +12,16 @@ class CustomUI:
         self.mines = 0
         self.valid = 0
 
+        self.min_params = 10
+        self.max_params = 50
+
     def start(self):
         label_heading = ttk.Label(master=self._root, text="Custom grid parameters:")
 
-        label_width = ttk.Label(master=self._root, text="Grid width (10-50):")
+        label_width = ttk.Label(master=self._root, text="Grid width (" + str(self.min_params) + "-" + str(self.max_params) + "):")
         self.entry_width = ttk.Entry(master=self._root)
 
-        label_height = ttk.Label(master=self._root, text="Grid height (10-50)")
+        label_height = ttk.Label(master=self._root, text="Grid height (" + str(self.min_params) + "-" + str(self.max_params) + ")")
         self.entry_height = ttk.Entry(master=self._root)
 
         label_mines = ttk.Label(master=self._root, text="Mines:")
@@ -48,9 +51,6 @@ class CustomUI:
         self._root.destroy()
 
     def _check_valid_inputs(self):
-        min_params = 10
-        max_params = 50
-
         try:
             self.width = int(self.entry_width.get())
             self.height = int(self.entry_height.get())
@@ -58,7 +58,7 @@ class CustomUI:
         except ValueError:
             return -1
 
-        if self.width < min_params or self.width > max_params or self.height < min_params or self.height > max_params:
+        if self.width < self.min_params or self.width > self.max_params or self.height < self.min_params or self.height > self.max_params:
             return -1
 
         max_mines = self.width * self.height - 1
