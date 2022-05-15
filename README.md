@@ -10,6 +10,7 @@ Klassikko miinaharava-peli. Jos peli ei ole ennestään tuttu, voi säännöt op
 * [Tuntikirjanpito](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 * [Changelog](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 * [Arkkitehtuuri](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [Testaus](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 ## Asennus
 
