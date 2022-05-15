@@ -19,17 +19,17 @@ poetry run invoke start
 ## Ohjelman testaaminen
 
 Testit voi suorittaa komennolla
-```bash
+```
 poetry run invoke test
 ```
 
 Testikattavuusraportin saa komennolla:
-```bash
+```
 poetry run invoke coverage-report
 ```
 
 Pylint-testit voi suorittaa komennolla:
-```bash
+```
 poetry run invoke lint
 ```
 
