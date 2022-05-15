@@ -1,7 +1,7 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
 Sovellus on Miinaharava-peli. Käyttäjä voi valita halutun vaikeustason, ja tallentaa pelin tuloksen pistetaulukolle.
-## Perusversion tarjoama toiminnallisuus
+## Toiminnallisuus
 - Vaikeustason valinta
 	- Peliä voi pelata kolmella klassikkovaikeustasolla (helppo, keskitasoinen, vaikea)
 	- Mahdollisuutena myös valita mukautettu, mielivaltaisen kokoinen pelilauta
