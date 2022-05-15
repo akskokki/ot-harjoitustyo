@@ -20,4 +20,4 @@ Pelisilmukasta vastaavaa GameLoop-luokkaa testataan luokalla [TestGameLoop](http
 
 Käyttöliittymäluokat on jätetty testikattavuuden ulkopuolelle. Ilman niitä, testauksen haarautumakattavuus on 89%.
 
-![](.kuvat/coverage.png)
+![](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/coverage.png)
