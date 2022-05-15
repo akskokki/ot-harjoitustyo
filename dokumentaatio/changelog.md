@@ -29,3 +29,11 @@
   - **Tiedetty bugi:** Jos pelikenttä on todella suuri, ja miinamäärä suhteellisen pieni, peli kaatuu tyhjien ruutujen avausketjun pituuden takia (RecursionError). Tämä tullaan korjaamaan tulevissa versioissa optimoimalla ruutujen avausalgoritmin toiminnallisuutta.
 - Paljon uutta docstring-dokumentaatiota
   - Kaikki pelilogiikkaluokat, sekä tärkeimmät käyttöliittymäluokat
+
+## Viikko 7
+- Pistetaulukot lisätty
+  - Vaikeusvalintaruudulla näkyy parhaat saavutetu ajat jokaisella vaikeustasolla
+- Loppuhiontaa ja optimisaatiota
+  - Peli ei enää kaadu ruutujen avausketjun rekursiovirheeseen isommillakaan kentillä
+- GameLoop-luokan testaus lisätty
+- Docstring-dokumentaatio viimeistelty
