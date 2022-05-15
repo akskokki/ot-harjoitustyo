@@ -15,29 +15,29 @@ Klassikko miinaharava-peli. Jos peli ei ole ennestään tuttu, voi säännöt op
 
 1. Asenna riippuvuudet komennolla:
 
-```bash
+```
 poetry install
 ```
 
 2. Käynnistä sovellus komennolla:
 
-```bash
+```
 poetry run invoke start
 ```
 
 ## Testaaminen
 
 Testit voi suorittaa komennolla
-```bash
+```
 poetry run invoke test
 ```
 
 Testikattavuusraportin saa komennolla:
-```bash
+```
 poetry run invoke coverage-report
 ```
 
 Pylint-testit voi suorittaa komennolla:
-```bash
+```
 poetry run invoke lint
 ```
