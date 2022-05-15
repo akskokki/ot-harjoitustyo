@@ -27,7 +27,7 @@ poetry run invoke start
 
 ## Testaaminen
 
-Testit voi suorittaa komennolla
+Testit voi suorittaa komennolla:
 ```
 poetry run invoke test
 ```
