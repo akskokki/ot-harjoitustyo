@@ -16,6 +16,23 @@ Nyt ohjelman voi käynnistää komennolla:
 poetry run invoke start
 ```
 
+## Ohjelman testaaminen
+
+Testit voi suorittaa komennolla
+```bash
+poetry run invoke test
+```
+
+Testikattavuusraportin saa komennolla:
+```bash
+poetry run invoke coverage-report
+```
+
+Pylint-testit voi suorittaa komennolla:
+```bash
+poetry run invoke lint
+```
+
 ## Vaikeustason valinta
 
 Ohjelma käynnistyy vaikeustasonvalintaruutuun, josta voi valita joko helpon, keskitasoisen tai vaikean pelin. Mahdollisuutena on myös custom-peli, jolloin ruudukon voi luoda halutun kokoiseksi.
