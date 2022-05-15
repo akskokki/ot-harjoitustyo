@@ -19,7 +19,7 @@ Sovelluksella on yksinkertainen käyttöliittymä, joka sisältää tällä hetk
 - Pelinäkymä
 - Loppunäkymä
 
-Pelin avautuessa käyttäjä näkee vaikeustasonvalintanäkymän, josta vaikeustason valinnan jälkeen siirrytään suoraan pelinäkymään.
+Pelin avautuessa käyttäjä näkee pistetaulukot sisältävän vaikeustasonvalintanäkymän, josta vaikeustason valinnan jälkeen siirrytään suoraan pelinäkymään.
 Pelin päättyessä avautuu loppunäkymä, josta voidaan vaihtaa vaikeustasoa tai aloittaa uusi peli.
 
 ## Sovelluslogiikka
