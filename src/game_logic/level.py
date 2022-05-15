@@ -3,6 +3,17 @@ from sprites.tile import Tile
 
 
 class Level:
+    """Class which handles the creation of and changes to the minefield
+
+    Attributes:
+        level_map: 2D array that shows the placement of mines and digits
+        cell_size: the size of a single tile on the grid
+        tiles: a pygame sprite group containing all Tile-objects
+        tiles_grid: all Tile-objects in a grid for handling of certain operations
+        all_sprites: a pygame sprite group containing all sprites to be rendered
+        chord_queue: stores all chording operations that will be executed on the next frame
+    """
+
     def __init__(self, level_map, cell_size):
         """Constructor that creates the level
 
@@ -15,8 +26,8 @@ class Level:
 
         self.tiles = pygame.sprite.Group()
         self.tiles_grid = []
-        self.chord_queue = []
         self.all_sprites = pygame.sprite.Group()
+        self.chord_queue = []
 
         self._create_level()
 
@@ -63,7 +74,7 @@ class Level:
 
         for y in range(tile_y-1, tile_y+2):
             for x in range(tile_x-1, tile_x+2):
-                if y >= 0 and y < len(self.tiles_grid) and x >= 0 and x < len(self.tiles_grid[0]):
+                if 0 <= y < len(self.tiles_grid) and 0 <= x < len(self.tiles_grid[0]):
                     self.chord_queue.append(self.tiles_grid[y][x])
 
     def _clear_chord_queue(self):

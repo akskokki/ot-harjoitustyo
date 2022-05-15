@@ -2,6 +2,16 @@ import pygame
 
 
 class GameLoop:
+    """Class which controls the game loop and responds to the user's actions
+
+    Attributes:
+        level: Level-object which represents the current level that is being played
+        renderer: Renderer-object which handles rendering
+        event_queue: EventQueue-object used to handle pygame-events
+        clock: Clock-object based on pygame.time.Clock
+        running: Boolean variable that determines whether the loop is running
+    """
+
     def __init__(self, level, renderer, event_queue, clock):
         """Constructor which initialises the gameloop and the tools required for its functionality
 
@@ -34,10 +44,10 @@ class GameLoop:
             self.renderer.render()
             if result == "win":
                 final_time = self.clock.get_ticks()
-                pygame.time.wait(2000)
+                self.clock.wait(2000)
                 return final_time
             if result == "loss":
-                pygame.time.wait(2000)
+                self.clock.wait(2000)
                 return -1
             self.clock.tick(60)
         return 0
@@ -45,12 +55,11 @@ class GameLoop:
     def _handle_events(self):
         """Event handler that responds to the user's clicks on the minefield
         """
-        for event in pygame.event.get():
+        for event in self.event_queue.get():
             if event.type == pygame.QUIT:
                 self.running = False
             if event.type == pygame.MOUSEBUTTONDOWN:
-                buttons = pygame.mouse.get_pressed()
-                if buttons[0] is True:
+                if event.button == 1:
                     self.level.click(event.pos, "left")
-                elif buttons[2] is True:
+                elif event.button == 3:
                     self.level.click(event.pos, "right")

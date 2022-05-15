@@ -46,6 +46,7 @@ class TestLevel(unittest.TestCase):
         self.assertEqual(self.level.tiles.sprites()[4].opened, False)
         self.assertEqual(self.level.tiles.sprites()[5].opened, False)
         self.level.click((50, 10), "left")
+        self.level._clear_chord_queue()
         self.assertEqual(self.level.tiles.sprites()[1].opened, True)
         self.assertEqual(self.level.tiles.sprites()[2].opened, True)
         self.assertEqual(self.level.tiles.sprites()[4].opened, True)

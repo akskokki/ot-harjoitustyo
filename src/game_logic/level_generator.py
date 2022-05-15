@@ -2,6 +2,16 @@ from random import Random
 
 
 class LevelGenerator:
+    """Class for constructing a simple grid as a blueprint for the minefield
+
+    Attributes:
+        random: a Random-object for random number generation
+        level: the grid that is being constructed
+        width: widht of the grid
+        height: height of the grid
+        mines: total mine count of the grid
+    """
+
     def __init__(self):
         """Constructor which creates a random number generator needed for the level generation
         """

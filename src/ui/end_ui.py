@@ -2,11 +2,29 @@ from tkinter import ttk
 
 
 class EndUI:
+    """Class for the UI displayed at the end of a game
+
+    Attributes:
+        root: the root window which the UI is being displayed on
+        selection: the selection the player makes on this view (1: restart, 2: change difficulty, 3: quit)
+    """
+
     def __init__(self, root):
+        """Constructor which sets the root UI window
+
+        Args:
+            root: the root window which the UI is being displayed on
+        """
+
         self._root = root
         self.selection = 0
 
     def start(self, time):
+        """Creates and starts the UI
+
+        Args:
+            time: the result of the game that has ended (-1: loss, otherwise total time in ms)
+        """
         if time == -1:
             heading = "Oh no! You clicked on a mine :("
         else:

@@ -5,19 +5,32 @@ from ui.custom_ui import CustomUI
 from ui.error_ui import ErrorUI
 from ui.game_ui import GameUI
 from ui.end_ui import EndUI
+from ui.scoreboard import Scoreboard
 
 
 class UI:
+    """Class for handling all UI operations and switching between different views
+
+    Attributes:
+        running: boolean variable which determines whether the UI is running
+        view: the current view that is being displayed in string form
+        game_difficulty: the difficulty level that has been chosen
+        game_time: the final time from the most recent game
+        custom_width, custom_height, custom_mines: attributes for custom game
+        scoreboard: Scoreboard-object that handles reading and writing scores
+    """
+
     def __init__(self):
         """Constructor which initialises the functionality of the main UI
         """
         self.running = True
         self.view = "difficulty"
         self.game_difficulty = 0
+        self.game_time = 0
         self.custom_width = 0
         self.custom_height = 0
         self.custom_mines = 0
-        self.game_time = 0
+        self.scoreboard = Scoreboard()
 
     def start(self):
         """Starts a simple loop that changes the view each time the previous view's functionality is completed
@@ -46,7 +59,7 @@ class UI:
         window.title("Minesweeper")
 
         difficulty_ui = DifficultyUI(window)
-        difficulty_ui.start()
+        difficulty_ui.start(self.scoreboard)
 
         window.resizable(False, False)
         window.mainloop()
@@ -57,7 +70,7 @@ class UI:
             self.view = "custom"
         else:
             self.view = "game"
-    
+
     def _handle_custom_ui(self):
         """Creates a custom game creation UI and passes the selected perimeters back to the main UI
         """
@@ -106,6 +119,9 @@ class UI:
         self.game_time = game_ui.start(self.game_difficulty)
         if self.game_time == 0:
             self.running = False
+
+        if self.game_time > 0:
+            self.scoreboard.add_score(self.game_difficulty, self.game_time)
 
         self.view = "end"
 

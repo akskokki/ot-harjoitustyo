@@ -2,7 +2,24 @@ from tkinter import ttk
 
 
 class CustomUI:
+    """Class for the UI of custom game creation
+
+    Attributes:
+        root: the root window which the UI is being displayed on
+        entry_width, entry_height, entry_mines: the user inputs that have been given
+        width, height, mines: the users inputs parsed into integers
+        valid: determines the validity of the inputs (-1: invalid, 0: unchecked, 1: valid)
+        min_params, max_params: the minimum and maximum parameters for the grid size
+    """
+
+
     def __init__(self, root):
+        """Constructor which sets the root UI window
+
+        Args:
+            root: the root window which the UI is being displayed on
+        """
+
         self._root = root
         self.entry_width = None
         self.entry_height = None
@@ -16,6 +33,9 @@ class CustomUI:
         self.max_params = 50
 
     def start(self):
+        """Creates and starts the UI
+        """
+
         label_heading = ttk.Label(master=self._root, text="Custom grid parameters:")
 
         label_width = ttk.Label(master=self._root, text="Grid width (" + str(self.min_params) + "-" + str(self.max_params) + "):")

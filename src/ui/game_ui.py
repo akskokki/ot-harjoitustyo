@@ -10,6 +10,14 @@ from utilities.clock import Clock
 
 
 class GameUI:
+    """Class for the main game UI
+
+    Attributes:
+        level_generator: LevelGenerator-object used for generating the level
+        level_width, level_height: the dimensions of the level in tiles
+        level_mines: the total amount of mines in the level
+        cell_size: the size of a single tile
+    """
     def __init__(self, level_width=0, level_height=0, level_mines=0):
         """Constructor which creates a LevelGenerator for generating a new level map and sets potential custom difficulty parameters
 

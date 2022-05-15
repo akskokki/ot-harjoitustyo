@@ -3,6 +3,19 @@ from utilities.load_image import load_image
 
 
 class Tile(pygame.sprite.Sprite):
+    """Class for storing the attributes and the state of a single tile.
+    Inherits the pygame Sprite-class.
+
+    Attributes:
+        digit: the value of the tile; -1 is a mine, 0 is a blank and 1-8 is a numbered tile
+        opened: tells you if the tile has been opened
+        flagged: tells you if the tile is currently flagged
+        exploded: tells you if tile has been exploded (contains a mine and has been clicked)
+        images: a list of all images the tile is prepared to switch to
+        image: the current image that is being displayed for the tile
+        rect: a pygame Rect-object to determine the area which the sprite covers
+    """
+
     def __init__(self, x, y, digit):
         """Constructor that creates the tile
 
@@ -17,9 +30,9 @@ class Tile(pygame.sprite.Sprite):
         self.flagged = False
         self.exploded = False
 
-        self._images = self._load_images()
+        self.images = self._load_images()
 
-        self.image = self._images["unopened"]
+        self.image = self.images["unopened"]
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -48,13 +61,13 @@ class Tile(pygame.sprite.Sprite):
         """Sets the tile's image to appropriately display its current state
         """
         if self.exploded:
-            self.image = self._images["mine_clicked"]
+            self.image = self.images["mine_clicked"]
         elif self.opened:
-            self.image = self._images["opened"]
+            self.image = self.images["opened"]
         elif self.flagged:
-            self.image = self._images["flag"]
+            self.image = self.images["flag"]
         else:
-            self.image = self._images["unopened"]
+            self.image = self.images["unopened"]
 
     def _load_images(self):
         """Loads all of the necessary images for the tile
