@@ -1,0 +1,23 @@
+# Testausdokumentti
+
+Ohjelmaa on testattu unittesteillä ja StubEventeillä.
+
+## Yksikkö- ja integraatiotestaus
+
+### Sovelluslogiikka
+
+Sovelluslogiikasta vastaavaa Level-luokkaa testataan luokalla [TestLevel](https://github.com/akskokki/ot-harjoitustyo/blob/master/src/tests/level_test.py). Testeissä suoritetaan erilaisia sovellustoimintoja, ja varmistetaan että ne tekevät oikeita asioita.
+
+### Kentän luominen
+
+Kenttää alustavan kartan luomisesta vastaavaa LevelGenerator-luokkaa testataan luokalla [TestLevelGenerator](https://github.com/akskokki/ot-harjoitustyo/blob/master/src/tests/level_generator_test.py). Testeissä luodaan uusi kenttä, ja varmistetaan että jokaisen solun arvo on sellainen kuin pitääkin.
+
+### Pelisilmukka
+
+Pelisilmukasta vastaavaa GameLoop-luokkaa testataan luokalla [TestGameLoop](https://github.com/akskokki/ot-harjoitustyo/blob/master/src/tests/game_loop_test.py). Testeissä silmukalle syötetään StubEvent-tapahtumia, ja tarkistetaan reagoiko silmukka niihin odotetulla tavalla.
+
+### Testikattavuus
+
+Käyttöliittymäluokat on jätetty testikattavuuden ulkopuolelle. Ilman niitä, testauksen haarautumakattavuus on 89%.
+
+![](.kuvat/coverage.png)
