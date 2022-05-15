@@ -21,3 +21,15 @@ Pelisilmukasta vastaavaa GameLoop-luokkaa testataan luokalla [TestGameLoop](http
 Käyttöliittymäluokat on jätetty testikattavuuden ulkopuolelle. Ilman niitä, testauksen haarautumakattavuus on 89%.
 
 ![](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/coverage.png)
+
+Testaamatta jäivät *utilities*-kansion alta löytyvät luokat, joiden päätarkoitus olikin se, että ne voidaan testeissä korvata helposti Stub-luokilla. Ehkä nekin olisi ollut järkevää jättää testikattavuuden ulkopuolelle, mutta kaikenkattavasti nämä testitulokset ovat varsin tyydyttäviä.
+
+## Järjestelmätestaus
+
+### Asennus
+
+Sovellus on testattu toimivaksi sekä Linux- että Windows-ympäristöissä. Windowsilla tosin invoke-komennot eivät toimi, joten komennot pitää kirjoittaa kokonaisuudessaan.
+
+### Toiminnallisuudet
+
+Kaikki [määrittelydokumentin](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md) listaamat toiminnallisuudet on käyty läpi ja niiden toimivuus testattu myös manuaalisesti.
