@@ -22,7 +22,7 @@ Käyttöliittymäluokat on jätetty testikattavuuden ulkopuolelle. Ilman niitä,
 
 ![](https://github.com/akskokki/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/coverage.png)
 
-Testaamatta jäivät *utilities*-kansion alta löytyvät luokat, joiden päätarkoitus olikin se, että ne voidaan testeissä korvata helposti Stub-luokilla. Ehkä nekin olisi ollut järkevää jättää testikattavuuden ulkopuolelle, mutta kaikenkattavasti nämä testitulokset ovat varsin tyydyttäviä.
+Testaamatta jäivät *utilities*-hakemiston alta löytyvät luokat, joiden päätarkoitus olikin se, että ne voidaan testeissä korvata helposti Stub-luokilla. Ehkä nekin olisi ollut järkevää jättää testikattavuuden ulkopuolelle, mutta kaikenkattavasti nämä testitulokset ovat varsin tyydyttäviä.
 
 ## Järjestelmätestaus
 
